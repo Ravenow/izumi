@@ -26,7 +26,7 @@ object Fiber3 {
     }
 
   implicit final class ToCats[FR[-_, +_, +_], A](private val bioFiber: Fiber3[FR, Throwable, A]) extends AnyVal {
-    def toCats(implicit F: Functor3[FR]): cats.effect.Fiber[FR[Any, Throwable, ?], A] = new cats.effect.Fiber[FR[Any, Throwable, ?], A] {
+    def toCats(implicit F: Functor3[FR]): cats.effect.Fiber[FR[Any, Throwable, _], A] = new cats.effect.Fiber[FR[Any, Throwable, _], A] {
       override def cancel: FR[Any, Throwable, Unit] = F.void(bioFiber.interrupt)
 
       override def join: FR[Any, Throwable, A] = bioFiber.join

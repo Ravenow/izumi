@@ -127,28 +127,28 @@ final case class Functoid[+A](get: Provider) {
 
 object Functoid {
   implicit def apply[R](fun: () => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
-  implicit def apply[R](fun: (_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
+  implicit def apply[R](fun: (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) => R): Functoid[R] = macro FunctoidMacro.impl[R]
 
   def todoProvider(key: DIKey)(implicit pos: CodePositionMaterializer): Functoid[Nothing] =
     new Functoid[Nothing](
@@ -206,7 +206,7 @@ object Functoid {
     )
   }
 
-  def identityKey(key: DIKey): Functoid[_] = {
+  def identityKey(key: DIKey): Functoid[?] = {
     val tpe = key.tpe
     val symbolInfo = firstParamSymbolInfo(tpe)
 
