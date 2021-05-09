@@ -128,7 +128,7 @@ object Izumi {
   import Deps._
 
   // DON'T REMOVE, these variables are read from CI build (build.sh)
-  final val scala212 = ScalaVersion("2.12.13")
+  final val scala212 = ScalaVersion("2.12.14-bin-SNAPSHOT")
   final val scala213 = ScalaVersion("2.13.6-bin-SNAPSHOT")
 
   object Groups {
@@ -233,7 +233,10 @@ object Izumi {
       final val sharedSettings = Defaults.SbtMetaOptions ++ outOfSource ++ Seq(
         "testOptions" in SettingScope.Test += """Tests.Argument("-oDF")""".raw,
         "scalacOptions" ++= Seq(
-          SettingKey(Some(scala212), None) := Defaults.Scala212Options,
+          SettingKey(Some(scala212), None) := Defaults.Scala212Options ++ Seq[Const](
+            "-Xsource:3",
+            "-P:kind-projector:underscore-placeholders",
+          ),
           SettingKey(Some(scala213), None) := (Defaults.Scala213Options ++ Seq[Const](
             "-Wunused:-synthetics",
             "-Xsource:3",
