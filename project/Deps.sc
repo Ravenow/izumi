@@ -147,10 +147,11 @@ object Izumi {
       language = targetScala,
       settings = Seq(
         // disable scoverage on 2.12 for now due to incompatibility with 2.12.13
-        "coverageEnabled" := Seq(
-          SettingKey(Some(scala212), None) := false,
-          SettingKey.Default := "coverageEnabled.value".raw,
-        )
+//        "coverageEnabled" := Seq(
+//          SettingKey(Some(scala212), None) := false,
+//          SettingKey.Default := "coverageEnabled.value".raw,
+//        )
+        "coverageEnabled" := false
       ),
     )
     private val jsPlatform = PlatformEnv(
